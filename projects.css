@@ -44,6 +44,18 @@ body {
     margin: 0;
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle,
+            transparent 55%,
+            rgba(0, 0, 0, 0.25) 100%);
+    z-index: -1;
+}
+
+
 /* Navigation */
 nav {
     width: 100%;
@@ -83,10 +95,12 @@ nav a:hover {
     text-decoration: none;
 }
 
-/* Page title */
 .page-title {
-    margin-bottom: 2rem;
-    font-size: 2rem;
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #0f172a;
 }
 
 /* Project grid */
@@ -96,22 +110,47 @@ nav a:hover {
     gap: 20px;
 }
 
-/* Project card */
-.project-card {
-    background: white;
-    border-radius: 10px;
+.card-slider {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 10px 10px 15px;
+}
+
+.card {
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 14px;
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    display: flex;
+    flex-direction: column;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
+.project-links {
+    margin-top: auto;
+    padding-top: 15px;
 }
 
-/* Project title */
-.project-card h3 {
-    margin-bottom: 10px;
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+}
+
+.card h2 {
+    margin: 15px 0 10px;
+    color: #222;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.5;
 }
 
 /* Tech stack */
@@ -121,10 +160,6 @@ nav a:hover {
     margin-top: 10px;
 }
 
-/* Buttons */
-.project-links {
-    margin-top: 15px;
-}
 
 .project-links a {
     text-decoration: none;
