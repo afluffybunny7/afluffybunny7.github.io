@@ -1,46 +1,86 @@
-/* Reset default browser styles */
-* {
-    margin: 0;
-    padding: 0;
+/*projects site layout*/
+
+.box {
+    width: 100%;
+    max-width: 1000px;
     box-sizing: border-box;
+    margin: 30px auto;
+    padding: 15px;
+    display: grid;
+    gap: 5px;
+    word-break: break-word;
+    border-radius: 25px;
 }
 
-/* Page styling */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: grid;
+    gap: 8px;
+    min-width: 0;
+}
+
+header {
+    width: 100%;
+    box-sizing: border-box;
+    color: #222;
+    background-color: white;
+    text-align: center;
+    border-radius: 25px;
+    padding: 20px;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f7fa;
+    background-color: white;
     color: #333;
     line-height: 1.6;
+    border-radius: 25px;
+    padding: 20px;
+    background: url('geometric-shapes-seamless-pattern-on-isolated-dark-background-free-vector.jpg');
+    background-size: fill;
+    margin: 0;
 }
 
-/* Navigation bar */
+/* Navigation */
 nav {
-    background-color: #222;
-    padding: 1rem 2rem;
-    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 25px;
+    padding: 18px 20px;
+    margin: 0;
 }
 
+/* Navigation links */
 nav ul {
-    list-style: none;
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
-    color: white;
+    color: #222;
     text-decoration: none;
     font-weight: bold;
+    padding: 6px 10px;
 }
 
 nav a:hover {
     color: #00bcd4;
-}
-
-/* Page container */
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 2rem;
+    text-decoration: none;
 }
 
 /* Page title */
@@ -89,7 +129,7 @@ nav a:hover {
 .project-links a {
     text-decoration: none;
     padding: 8px 12px;
-    background: #0077cc;
+    background: #00bcd4;
     color: white;
     border-radius: 5px;
     margin-right: 10px;
@@ -97,5 +137,15 @@ nav a:hover {
 }
 
 .project-links a:hover {
-    background: #005fa3;
+    background: #00bcd4;
+}
+
+/*Footer*/
+footer {
+    color: #222;
+    background-color: white;
+    text-align: center;
+    min-width: 0;
+    border-radius: 25px;
+    padding: 10px;
 }
