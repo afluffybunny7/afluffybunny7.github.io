@@ -1,0 +1,245 @@
+.box {
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
+    margin: 30px auto;
+    padding: 15px;
+    display: grid;
+    gap: 5px;
+    word-break: break-word;
+    border-radius: 25px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: grid;
+    gap: 8px;
+    min-width: 0;
+}
+
+header {
+    width: 100%;
+    box-sizing: border-box;
+    color: #222;
+    background-color: white;
+    text-align: center;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.page-title {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #0f172a;
+}
+
+/* Navigation */
+nav {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 25px;
+    padding: 18px 20px;
+    margin: 0;
+}
+
+/* Navigation links */
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 10px;
+}
+
+nav a:hover {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: #333;
+    line-height: 1.6;
+    border-radius: 25px;
+    padding: 20px;
+    background: url('geometric-shapes-seamless-pattern-on-isolated-dark-background-free-vector.jpg');
+    background-size: fill;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle,
+            transparent 55%,
+            rgba(0, 0, 0, 0.25) 100%);
+    z-index: -1;
+}
+
+/*About Me*/
+main {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+}
+
+main section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main h2 {
+    margin-top: 0;
+}
+
+main p {
+    color: #475569;
+    font-size: 1.05rem;
+}
+
+/* Contact Form */
+form {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    display: grid;
+    gap: 18px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    background-color: #f8fafc;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+form input {
+    height: 50px;
+}
+
+form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #94a3b8;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #00bcd4;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.15);
+}
+
+form button {
+    justify-self: center;
+    margin-top: 5px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #00bcd4;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+form button:hover {
+    background-color: #0097a7;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.25);
+}
+
+form button:active {
+    transform: translateY(0);
+}
+
+
+/* Tech stack */
+.tech {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Buttons */
+.button {
+    margin-top: 15px;
+}
+
+.button a {
+    display: inline-block;
+    padding: 9px 16px;
+    background: #00bcd4;
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.button a:hover {
+    background: #00bcd4;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design*/
+@media (max-width: 700px) {
+    main {
+        padding: 25px 20px;
+    }
+
+    form {
+        gap: 14px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 1rem;
+    }
+
+    form button {
+        width: 100%;
+    }
+}
